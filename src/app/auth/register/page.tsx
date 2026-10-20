@@ -109,10 +109,11 @@ export default function RegisterPage() {
 
         <form onSubmit={handleRegister} className={styles.form}>
           <div className={styles.field}>
-            <label className={styles.label}>Nome Completo</label>
+            <label htmlFor="register-name" className={styles.label}>Nome Completo</label>
             <div className={styles.inputWrap}>
               <UserIcon className={styles.inputIcon} />
               <input
+                id="register-name"
                 type="text"
                 required
                 placeholder="Seu Nome Completo"
@@ -124,10 +125,11 @@ export default function RegisterPage() {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Username (@)</label>
+            <label htmlFor="register-username" className={styles.label}>Username (@)</label>
             <div className={styles.inputWrap}>
               <span className={styles.usernamePrefix}>@</span>
               <input
+                id="register-username"
                 type="text"
                 required
                 placeholder="seunome"
@@ -139,10 +141,11 @@ export default function RegisterPage() {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Email</label>
+            <label htmlFor="register-email" className={styles.label}>Email</label>
             <div className={styles.inputWrap}>
               <MailIcon className={styles.inputIcon} />
               <input
+                id="register-email"
                 type="email"
                 required
                 placeholder="seu.email@exemplo.com"
@@ -154,10 +157,11 @@ export default function RegisterPage() {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Senha (mínimo 6 caracteres)</label>
+            <label htmlFor="register-password" className={styles.label}>Senha (mínimo 6 caracteres)</label>
             <div className={styles.inputWrap}>
               <LockIcon className={styles.inputIcon} />
               <input
+                id="register-password"
                 type="password"
                 required
                 minLength={6}

@@ -78,10 +78,11 @@ function LoginForm() {
 
         <form onSubmit={handleEmailLogin} className={styles.form}>
           <div>
-            <label className={styles.label}>Email</label>
+            <label htmlFor="login-email" className={styles.label}>Email</label>
             <div className={styles.inputWrap}>
               <MailIcon className={styles.fieldIcon} />
               <input
+                id="login-email"
                 type="email"
                 required
                 placeholder="seu.email@exemplo.com"
@@ -93,10 +94,11 @@ function LoginForm() {
           </div>
 
           <div>
-            <label className={styles.label}>Senha</label>
+            <label htmlFor="login-password" className={styles.label}>Senha</label>
             <div className={styles.inputWrap}>
               <LockIcon className={styles.fieldIcon} />
               <input
+                id="login-password"
                 type="password"
                 required
                 placeholder="••••••••"

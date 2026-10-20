@@ -99,8 +99,9 @@ export default function ContatoPage() {
 
             <div className={styles.formRow}>
               <div>
-                <label className={styles.label}>Seu Nome</label>
+                <label htmlFor="contact-name" className={styles.label}>Seu Nome</label>
                 <input
+                  id="contact-name"
                   type="text"
                   required
                   placeholder="Nome completo"
@@ -110,8 +111,9 @@ export default function ContatoPage() {
                 />
               </div>
               <div>
-                <label className={styles.label}>Seu Email</label>
+                <label htmlFor="contact-email" className={styles.label}>Seu Email</label>
                 <input
+                  id="contact-email"
                   type="email"
                   required
                   placeholder="seu.email@exemplo.com"
@@ -123,8 +125,9 @@ export default function ContatoPage() {
             </div>
 
             <div>
-              <label className={styles.label}>Assunto</label>
+              <label htmlFor="contact-subject" className={styles.label}>Assunto</label>
               <input
+                id="contact-subject"
                 type="text"
                 required
                 placeholder="Ex: Parceria institucional / Sugestão de funcionalidade"
@@ -135,8 +138,9 @@ export default function ContatoPage() {
             </div>
 
             <div>
-              <label className={styles.label}>Mensagem</label>
+              <label htmlFor="contact-message" className={styles.label}>Mensagem</label>
               <textarea
+                id="contact-message"
                 rows={4}
                 required
                 placeholder="Escreva sua mensagem detalhada..."

@@ -81,8 +81,9 @@ export default function NovoEventoPage() {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
-          <label>Título do Evento *</label>
+          <label htmlFor="event-title">Título do Evento *</label>
           <input
+            id="event-title"
             required
             value={form.title}
             onChange={e => setForm({ ...form, title: e.target.value })}
@@ -92,8 +93,9 @@ export default function NovoEventoPage() {
 
         <div className={styles.row}>
           <div className={styles.field}>
-            <label>Data *</label>
+            <label htmlFor="event-date">Data *</label>
             <input
+              id="event-date"
               type="datetime-local"
               required
               value={form.date}
@@ -101,8 +103,9 @@ export default function NovoEventoPage() {
             />
           </div>
           <div className={styles.field}>
-            <label>Localização *</label>
+            <label htmlFor="event-location">Localização *</label>
             <input
+              id="event-location"
               required
               value={form.location}
               onChange={e => setForm({ ...form, location: e.target.value })}
@@ -112,8 +115,8 @@ export default function NovoEventoPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Tipo</label>
-          <select value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}>
+          <label htmlFor="event-type">Tipo</label>
+          <select id="event-type" value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}>
             <option value="meetup">Meetup</option>
             <option value="hackathon">Hackathon</option>
             <option value="workshop">Workshop</option>
@@ -122,8 +125,9 @@ export default function NovoEventoPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Link do Evento</label>
+          <label htmlFor="event-link">Link do Evento</label>
           <input
+            id="event-link"
             type="url"
             value={form.link}
             onChange={e => setForm({ ...form, link: e.target.value })}
@@ -132,8 +136,9 @@ export default function NovoEventoPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Descrição</label>
+          <label htmlFor="event-description">Descrição</label>
           <textarea
+            id="event-description"
             rows={5}
             value={form.description}
             onChange={e => setForm({ ...form, description: e.target.value })}
