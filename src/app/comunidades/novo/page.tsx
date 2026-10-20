@@ -77,8 +77,9 @@ export default function NovaComunidadePage() {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
-          <label>Nome da Comunidade *</label>
+          <label htmlFor="community-name">Nome da Comunidade *</label>
           <input
+            id="community-name"
             required
             value={form.name}
             onChange={e => setForm({ ...form, name: e.target.value })}
@@ -87,8 +88,8 @@ export default function NovaComunidadePage() {
         </div>
 
         <div className={styles.field}>
-          <label>Tipo</label>
-          <select value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}>
+          <label htmlFor="community-type">Tipo</label>
+          <select id="community-type" value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}>
             <option value="tech">Tech</option>
             <option value="startup">Startup</option>
             <option value="education">Educação</option>
@@ -97,8 +98,9 @@ export default function NovaComunidadePage() {
         </div>
 
         <div className={styles.field}>
-          <label>Logo URL</label>
+          <label htmlFor="community-logo">Logo URL</label>
           <input
+            id="community-logo"
             type="url"
             value={form.logo_url}
             onChange={e => setForm({ ...form, logo_url: e.target.value })}
@@ -107,8 +109,9 @@ export default function NovaComunidadePage() {
         </div>
 
         <div className={styles.field}>
-          <label>Descrição *</label>
+          <label htmlFor="community-description">Descrição *</label>
           <textarea
+            id="community-description"
             required
             rows={5}
             value={form.description}

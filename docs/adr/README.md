@@ -33,6 +33,7 @@
 | [ADR 0023](0023-generalizar-organizations-org-type.md) | 2026-10-02 | Ecossistema / Organizações | Generalizar Organizations com org_type incremental | **Proposto** |
 | [ADR 0024](0024-person-model-multiplos-papeis.md) | 2026-10-02 | Identidade / Person | Evoluir `profiles` para modelo Person com papéis múltiplos | **Proposto** |
 | [ADR 0026](0026-reputacao-badges-moderacao-fase-5.md) | 2026-10-02 | Reputação / Moderação | Reputação, badges e moderação — Fase 5 do Community OS | **Proposto** |
+| [ADR 0027](0027-auditoria-acessibilidade-performance-e-ci.md) | 2026-10-20 | Qualidade / DevOps / Acessibilidade | Auditoria de acessibilidade, performance e CI | **Aceito** |
 
 ---
 

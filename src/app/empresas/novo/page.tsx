@@ -81,8 +81,9 @@ export default function NovaEmpresaPage() {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
-          <label>Nome da Empresa *</label>
+          <label htmlFor="company-name">Nome da Empresa *</label>
           <input
+            id="company-name"
             required
             value={form.name}
             onChange={e => setForm({ ...form, name: e.target.value })}
@@ -92,16 +93,17 @@ export default function NovaEmpresaPage() {
 
         <div className={styles.row}>
           <div className={styles.field}>
-            <label>Indústria</label>
+            <label htmlFor="company-industry">Indústria</label>
             <input
+              id="company-industry"
               value={form.industry}
               onChange={e => setForm({ ...form, industry: e.target.value })}
               placeholder="Ex: Tecnologia"
             />
           </div>
           <div className={styles.field}>
-            <label>Tamanho</label>
-            <select value={form.size} onChange={e => setForm({ ...form, size: e.target.value })}>
+            <label htmlFor="company-size">Tamanho</label>
+            <select id="company-size" value={form.size} onChange={e => setForm({ ...form, size: e.target.value })}>
               <option value="">Selecione</option>
               <option value="1-10">1-10</option>
               <option value="11-50">11-50</option>
@@ -112,16 +114,18 @@ export default function NovaEmpresaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Localização</label>
+          <label htmlFor="company-location">Localização</label>
           <input
+            id="company-location"
             value={form.location}
             onChange={e => setForm({ ...form, location: e.target.value })}
           />
         </div>
 
         <div className={styles.field}>
-          <label>Website</label>
+          <label htmlFor="company-website">Website</label>
           <input
+            id="company-website"
             type="url"
             value={form.website}
             onChange={e => setForm({ ...form, website: e.target.value })}
@@ -130,8 +134,9 @@ export default function NovaEmpresaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Descrição</label>
+          <label htmlFor="company-description">Descrição</label>
           <textarea
+            id="company-description"
             rows={5}
             value={form.description}
             onChange={e => setForm({ ...form, description: e.target.value })}

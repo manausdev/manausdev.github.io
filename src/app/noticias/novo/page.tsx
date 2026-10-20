@@ -82,8 +82,9 @@ export default function NovaNoticiaPage() {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
-          <label>Título *</label>
+          <label htmlFor="news-title">Título *</label>
           <input
+            id="news-title"
             required
             value={form.title}
             onChange={e => setForm({ ...form, title: e.target.value })}
@@ -92,8 +93,8 @@ export default function NovaNoticiaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Categoria</label>
-          <select value={form.category} onChange={e => setForm({ ...form, category: e.target.value as NewsCategory })}>
+          <label htmlFor="news-category">Categoria</label>
+          <select id="news-category" value={form.category} onChange={e => setForm({ ...form, category: e.target.value as NewsCategory })}>
             <option value="geral">Geral</option>
             <option value="evento">Evento</option>
             <option value="vaga">Vaga</option>
@@ -103,8 +104,9 @@ export default function NovaNoticiaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Imagem URL</label>
+          <label htmlFor="news-image">Imagem URL</label>
           <input
+            id="news-image"
             type="url"
             value={form.image_url}
             onChange={e => setForm({ ...form, image_url: e.target.value })}
@@ -113,8 +115,9 @@ export default function NovaNoticiaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Resumo</label>
+          <label htmlFor="news-excerpt">Resumo</label>
           <textarea
+            id="news-excerpt"
             rows={3}
             value={form.excerpt}
             onChange={e => setForm({ ...form, excerpt: e.target.value })}
@@ -123,8 +126,9 @@ export default function NovaNoticiaPage() {
         </div>
 
         <div className={styles.field}>
-          <label>Conteúdo</label>
+          <label htmlFor="news-content">Conteúdo</label>
           <textarea
+            id="news-content"
             rows={8}
             value={form.content}
             onChange={e => setForm({ ...form, content: e.target.value })}
