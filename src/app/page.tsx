@@ -49,13 +49,11 @@ export default async function HomePage() {
         eventsRes,
         newsRes,
         jobsRes,
-        projectsCountRes,
         communitiesCountRes,
-        jobsCountRes,
       ] = await Promise.all([
         developersService.featured(4),
         developersService.count(),
-        supabase.from('projects').select('*').limit(3),
+        supabase.from('projects').select('*', { count: 'exact' }).limit(3),
         supabase.from('events').select('*').order('date', { ascending: true }).limit(6),
         supabase
           .from('news')
@@ -63,10 +61,8 @@ export default async function HomePage() {
           .eq('published', true)
           .order('published_at', { ascending: false })
           .limit(6),
-        supabase.from('jobs').select('*').limit(3),
-        supabase.from('projects').select('*', { count: 'exact', head: true }),
+        supabase.from('jobs').select('*', { count: 'exact' }).limit(3),
         supabase.from('communities').select('*', { count: 'exact', head: true }),
-        supabase.from('jobs').select('*', { count: 'exact', head: true }),
       ]);
 
       devs = resolveList([], featuredDevs);
@@ -76,9 +72,9 @@ export default async function HomePage() {
       jobs = resolveList([], jobsRes.data);
 
       devsCount = devsTotal;
-      projectsCount = projectsCountRes.count ?? 0;
+      projectsCount = projectsRes.count ?? 0;
       communitiesCount = communitiesCountRes.count ?? 0;
-      jobsCount = jobsCountRes.count ?? 0;
+      jobsCount = jobsRes.count ?? 0;
     } catch {
       // Keep empty lists — never invent production content
     }
